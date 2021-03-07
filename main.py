@@ -33,7 +33,7 @@ with open("pokegirls.csv","r") as csvfile:
     print(rl)
     for row_num,row in enumerate(rl):
         table=f"{'╔':═<10}{'╤':═<10}╗\n"
-        table+=f"\n{'╟':─<10}{'┼':─<10}╢\n".join([f"║{key[:9]:<9}│{str(value)[:9]:<9}║" for key,value in row.items()])
+        table+=f"\n{'╟':─<10}{'┼':─<10}╢\n".join([f"║{key[:9].title():<9}│{str(value)[:9].title():<9}║" for key,value in row.items()])
         table+=f"\n{'╚':═<10}{'╧':═<10}╝"
         table+=f'''
 {f"{int(100*((row_num+1)/len(rl)))}% done":^21}
@@ -42,5 +42,5 @@ with open("pokegirls.csv","r") as csvfile:
         os.system("clear")
         print(table)
         data={key:value for key,value in row.items() if not key in ["name","image"]}
-        make_chart(str(row_num)+"_"+row["name"],row["image"],data)
+        make_chart(str(row_num)+"_"+row["name"].title(),row["image"],data)
     
