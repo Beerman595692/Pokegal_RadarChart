@@ -1,4 +1,4 @@
-#PokeGal RadarChart Maker
+# PokeGal RadarChart Maker
 
 ## How to use
  
