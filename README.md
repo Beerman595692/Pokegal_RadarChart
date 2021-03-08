@@ -10,4 +10,4 @@ Also  when selecting images to use make the images are atleast are around 1050x6
 
 ## What you get
 
-<img id="girl" width="50%" src="charts/11_Whitney.png">
+<img id="girl" width="50%" src="charts/46_Serena.png">
